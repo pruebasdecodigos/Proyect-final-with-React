@@ -69,7 +69,6 @@ const LandingContent = () => {
                     image={imgDev2}
                 />
         </section>
-        <p>prueba del cambio</p>
     </section>
     </main>
 </div>
