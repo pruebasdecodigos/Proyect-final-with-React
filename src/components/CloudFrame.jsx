@@ -5,26 +5,10 @@ import "../styles/CloudFrame.css";
 
 export default function CloudFrame({ src, alt = "", direction = "left" }) {
   const flyIn = {
-    initial: {
-      opacity: 0,
-      x: direction === "left" ? -180 : 180,
-      scale: 0.85,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 70,
-        damping: 12,
-        duration: 1.2,
-      },
-    },
-    whileHover: {
-      scale: 1.05,
-      rotate: direction === "left" ? -2 : 2,
-    },
+  initial: {opacity: 0, x: direction === "left" ? -180 : 180, scale: 0.85,},
+  animate: {opacity: 1, x: 0, scale: 1.05,},
+  transition: {type: "spring", stiffness: 70, damping: 12, duration: 1.2,},
+  whileHover: {scale: 1.05, rotate: direction === "left" ? -2 : 2,},
   };
 
   return (

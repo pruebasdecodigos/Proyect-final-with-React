@@ -2,12 +2,11 @@ import { useNavigate } from "react-router-dom";
 import "../styles/LandingContent.css";
 import imgHero from "../assets/FondoMinecraft.png";
 import imgLanding from "../assets/FondoLanding.png";
-import imgDev1 from "../assets/dev1.jpeg";
-import imgDev2 from "../assets/dev2.png";
+import imgDev1 from "../assets/Dev1.jpeg";
+import imgDev2 from "../assets/dev2.jpeg";
 import CardAnimada from "../components/CardAnimada";
 import CloudFrame from "../components/CloudFrame";
-<CloudFrame src={imgDev1} alt="Duvan Romero" width="350px" height="250px" />
-import DevItem from "../components/DevItem";
+import DevItem from "../components/DevItem";    
 
 
 
@@ -57,7 +56,7 @@ const LandingContent = () => {
                     direction="left"
                     name="Duvan Altamar"
                     role="Frontend Developer · Full Stack · CSS Enthusiast"
-                    quote="Mi pasión es crear interfaces que no solo sean funcionales sino también hermosas. Cada línea de código es una oportunidad para innovar y sorprender."
+                    quote="Mi pasión es crear interfaces..."
                     image={imgDev1}
                 />
 
