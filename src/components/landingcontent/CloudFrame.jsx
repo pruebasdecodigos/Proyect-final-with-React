@@ -21,9 +21,13 @@ export default function CloudFrame({ src, alt = "", direction = "left" }) {
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="cloud-frame">
-        <img src={CloudFrameImage} alt="cloud" className="cloud-bg" />
+        <img src={CloudFrameImage} alt="" className="cloud-bg" />
         <img src={src} alt={alt} className="dev-photo" />
       </div>
     </motion.div>
   );
 }
+
+/*===================  
+   Terminado :D
+===================*/

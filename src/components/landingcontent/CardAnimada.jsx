@@ -33,14 +33,13 @@ export default function CardAnimada({ children, direction = "left", animationTyp
     },
   };
 
-  // loop de flotación cuando está visible (solo float)
   const floatAnimation =
     animationType === "float"
       ? {
           y: [0, -8, 0],
           transition: { duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
         }
-      : {};
+      : undefined; // en lugar de {} para no animar nada innecesariamente
 
   return (
     <motion.div
@@ -51,9 +50,14 @@ export default function CardAnimada({ children, direction = "left", animationTyp
       whileHover={{ scale: 1.02 }}
       style={{ willChange: "transform, opacity" }}
     >
-      <motion.div animate={inView ? floatAnimation : {}}>
+      <motion.div animate={inView ? floatAnimation : undefined}>
         {children}
       </motion.div>
     </motion.div>
   );
 }
+
+
+/*=============== 
+  Terminado :D
+===============*/

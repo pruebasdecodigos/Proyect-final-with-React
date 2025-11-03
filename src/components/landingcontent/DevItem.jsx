@@ -19,3 +19,7 @@ export default function DevItem({ direction, name, role, quote, image }) {
     </div>
   );
 }
+
+/*===================  
+   Terminado :D
+===================*/

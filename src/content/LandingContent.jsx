@@ -4,11 +4,7 @@ import imgHero from "../assets/FondoMinecraft.png";
 import imgLanding from "../assets/FondoLanding.png";
 import imgDev1 from "../assets/Dev1.jpeg";
 import imgDev2 from "../assets/Dev2.jpeg";
-import CardAnimada from "../components/landingcontent/CardAnimada.jsx";
-import CloudFrame from "../components/landingcontent/CloudFrame.jsx";
 import DevItem from "../components/landingcontent/DevItem.jsx";
-
-
 
 const LandingContent = () => {
   const navigate = useNavigate();
@@ -23,7 +19,9 @@ const LandingContent = () => {
           backgroundPosition: "center",
         }}
       />
+
       <main className="landing-main">
+        {/* Hero Section */}
         <section id="hero-section" className="hero-section">
           <div className="hero-content">
             <h1>
@@ -43,6 +41,7 @@ const LandingContent = () => {
           </div>
         </section>
 
+        {/* About Section */}
         <section id="about-section" className="about-section">
           <div className="tittle-about-we">
             <h2>Sobre Nosotros</h2>
@@ -56,6 +55,7 @@ const LandingContent = () => {
             para crear experiencias únicas.
           </p>
 
+          {/* Developers Section */}
           <section className="dev-section">
             <DevItem
               direction="left"
@@ -64,7 +64,6 @@ const LandingContent = () => {
               quote="Mi pasión es crear interfaces..."
               image={imgDev1}
             />
-
             <DevItem
               direction="right"
               name="Lia"
@@ -80,3 +79,7 @@ const LandingContent = () => {
 };
 
 export default LandingContent;
+
+/*===================  
+   Terminado :D
+===================*/
