@@ -1,5 +1,5 @@
 import Header from "../components/Header.jsx";
-import MainLayoutContent from "../content/MainLayoutContent.jsx";
+import Resenas from "../components/resenas/Resenas.jsx";
 import Footer from "../components/Footer";
 import FondoMainLayout from "../assets/FondoLanding.png";
 import "../styles/MainLayout.css";
@@ -18,7 +18,7 @@ function MainLayout() {
     >
       <Header menuType="main" className="header-vertical" />
       <div className="main-content">
-        <MainLayoutContent />
+        <Resenas />
         <Footer />
       </div>
     </div>
