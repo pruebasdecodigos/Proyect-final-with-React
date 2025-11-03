@@ -31,7 +31,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Explorar</h3>
           <ul>
-            <li><a href="/main">Inicio</a></li>
+            <li><a href="#">Inicio</a></li>
             <li><a href="/library">Biblioteca</a></li>
             <li><a href="/trending">Tendencias</a></li>
             <li><a href="/community">Comunidad</a></li>
