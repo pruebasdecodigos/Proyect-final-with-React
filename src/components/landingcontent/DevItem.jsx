@@ -1,6 +1,6 @@
 import React from "react";
-import CloudFrame from "./CloudFrame";
-import "../styles/DevItem.css";
+import CloudFrame from "./CloudFrame.jsx";
+import "../../styles/DevItem.css";
 
 export default function DevItem({ direction, name, role, quote, image }) {
   const isLeft = direction === "left";

@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar";
+import Header from "../components/Header.jsx";
+import MainLayoutContent from "../content/MainLayoutContent.jsx";
 import Footer from "../components/Footer";
-import Home from "./home.jsx";
 
 function MainLayout() {
   return (
     <>
-      <Navbar />
-      <Home />
+      <Header />
+      <MainLayoutContent />
       <Footer />
     </>
   );
