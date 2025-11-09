@@ -1,0 +1,109 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #1a063b, #0a0a2a, #1b003d);
+  background-image: url("../../assets/FondoLanding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.hero-section {
+  position: relative;
+  height: calc(100vh - 90px); 
+  width: 100%;
+  background: linear-gradient(135deg, #1a063b, #0a0a2a, #1b003d);
+  background-image: url("../../assets/FondoLanding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 20, 44, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.Title-hero {
+  position: relative;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(25deg, #C981F0, #E377CC, #EF74BC, #B388D3, #8E95E5, #779DEF);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.Text-info {
+  position: relative;
+  font-size: 1.1rem;
+  color: #C7B9E5;
+  max-width: 700px;
+  margin: 0 auto 10px auto;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.button-General,
+.button-hero {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.button-General {
+  background: linear-gradient(90deg, #ff4cc7, #9b40f8);
+  color: white;
+  box-shadow: 0 0 15px rgba(155, 64, 248, 0.5);
+}
+
+.button-General:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(155, 64, 248, 0.8);
+}
+
+.button-hero {
+  background: transparent;
+  border: 2px solid #8a80ff;
+  color: #fff;
+}
+
+.button-hero:hover {
+  background: #ffffff;
+  color: #8a80ff;
+  transform: translateY(-3px);
+}

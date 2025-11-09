@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./../styles/Header.css";
+import "../styles/Header.css";
 
 function Header({ menuType = "landing", className = "" }) {
   const navigate = useNavigate();
@@ -18,13 +18,11 @@ function Header({ menuType = "landing", className = "" }) {
 
   return (
     <header className={`landing-header ${className}`}>
-      {/* Logo */}
       <h1 className="logo">
         <span className="gex">Gex</span>
         <span className="studio">Studio</span>
       </h1>
 
-      {/* Navegación */}
       <nav>
         {menuType === "landing" ? (
           <ul>
@@ -39,10 +37,17 @@ function Header({ menuType = "landing", className = "" }) {
             </li>
           </ul>
         ) : (
-          <ul>
+          <ul className="TextSecondHeader">
             <li onClick={() => navigate("/main")}>Home</li>
-            <li onClick={() => navigate("/projects")}>Proyectos</li>
+            <li onClick={() => navigate("/bibliary")}>Biblioteca</li>
+            <li onClick={() => navigate("/reviews")}>Reseñas</li>
             <li onClick={() => navigate("/community")}>Comunidad</li>
+            <li onClick={() => navigate("/#about-section")}>Desarrolladores</li>
+            <li onClick={() => navigate("/settings")}>Configuracion</li>
+            <button className="add-btn" onClick={() => navigate("/pruebas")}>
+              + Agregar Juego
+            </button>
+
             <li>
               <button className="open-btn" onClick={() => navigate("/")}>
                 Volver al Landing

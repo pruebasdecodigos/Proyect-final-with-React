@@ -1,25 +1,16 @@
 import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 import Resenas from "../components/resenas/Resenas.jsx";
-import Footer from "../components/Footer";
-import FondoMainLayout from "../assets/FondoLanding.png";
-import "../styles/MainLayout.css";
+import MainLayoutContent from "../content/MainLayoutContent.jsx"
+import "../styles/pages-styles/MainLayout.css";
 
 function MainLayout() {
   return (
-    <div
-      className="main-layout"
-      style={{
-        backgroundImage: `url(${FondoMainLayout})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div>
       <Header menuType="main" className="header-vertical" />
       <div className="main-content">
-        <Resenas />
-        <Footer />
+      <MainLayoutContent/>
+      <Footer />
       </div>
     </div>
   );

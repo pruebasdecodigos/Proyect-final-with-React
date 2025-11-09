@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../styles/LandingContent.css";
-import Header from "../components/Header";
+import Header from "../components/Header.jsx";
 import LandingContent from "../content/LandingContent.jsx";
 
 const Landing = () => {
