@@ -1,0 +1,132 @@
+/* ============================================================
+   MAIN LAYOUT — VERTICAL HEADER + CONTENT
+============================================================ */
+
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+/* 📄 Contenido principal */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  color: var(--color-text-primary);
+  transition: margin-left var(--transition-medium);
+}
+
+/* 🧭 Header lateral */
+.header-vertical {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: transparent;
+  border-right: 1px solid rgba(40, 52, 88, 0.4);
+  box-shadow: 4px 0 25px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sidebar-padding) 16px;
+  z-index: 10;
+  transition: all var(--transition-medium);
+}
+
+/* 🧩 Logo */
+.header-vertical .logo {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.gex {
+  color: var(--accent-blue);
+  text-shadow: 0 0 10px rgba(77, 196, 255, 0.8);
+}
+
+.studio {
+  color: #e0e0e0;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* 🧭 Navegación lateral */
+.header-vertical nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-vertical nav li {
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
+}
+
+.header-vertical nav li:hover {
+  color: var(--color-text-primary);
+  text-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* 🟢 Botón */
+.header-vertical .open-btn {
+  position: relative;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  backdrop-filter: blur(6px) saturate(1.1);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.header-vertical .open-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 30px rgba(139, 124, 255, 0.16);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .header-vertical {
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0 16px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 70px;
+  }
+
+  .header-vertical nav ul {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .header-vertical .open-btn {
+    display: none;
+  }
+}

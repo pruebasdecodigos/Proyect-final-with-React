@@ -1,0 +1,88 @@
+.hero-LayoutContent {
+  position: relative;
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  background: var(--gradient-bg), url("../../assets/FondoLanding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(var(--bg-brightness));
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: var(--text-color);
+  padding: 0 40px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-LayoutContent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-color);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.Title-hero {
+  position: relative;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.Text-info {
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.button-General,
+.button-hero {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all var(--transition-fast);
+  z-index: 1;
+}
+
+.button-General {
+  background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple));
+  color: var(--text-color);
+  box-shadow: 0 0 15px rgba(155, 64, 248, 0.5);
+}
+
+.button-General:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(155, 64, 248, 0.8);
+}
+
+.button-hero {
+  background: transparent;
+  border: 2px solid var(--accent-border);
+  color: var(--text-color);
+}
+
+.button-hero:hover {
+  background: var(--text-color);
+  color: var(--accent-border);
+  transform: translateY(-3px);
+}
