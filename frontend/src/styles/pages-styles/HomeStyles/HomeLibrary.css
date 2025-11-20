@@ -1,0 +1,66 @@
+:root {
+  --color-text-primary: #ffffff;
+  --color-accent-1: #a58dff;
+  --color-accent-2: #9b40f8;
+  --color-accent-3: #ff4cc7;
+}
+
+.HomeSections__gameLibrary {
+  text-align: center;
+  padding: 80px 40px;
+  color: var(--color-text-primary);
+}
+
+/* Texto */
+.HomeSections__gameLibrary p {
+  color: #bfb6ee;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+/* Botones */
+.HomeSections__button--primary,
+.HomeSections__button--secondary {
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.HomeSections__button--primary {
+  background: linear-gradient(90deg, var(--color-accent-3), var(--color-accent-2));
+  color: var(--color-text-primary);
+}
+
+.HomeSections__button--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-accent-1);
+}
+
+.HomeSections__subtitle {
+  color: #bfb6ee;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.GameContainer {
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+/* Hover para botones */
+.HomeSections__button--primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.HomeSections__button--secondary:hover {
+  background: rgba(165, 141, 255, 0.15);
+  transform: translateY(-2px);
+}
+

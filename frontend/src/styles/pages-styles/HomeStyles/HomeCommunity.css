@@ -1,0 +1,139 @@
+/* HomeCommunity.css
+   Estilos específicos para CommunitySection.jsx
+   - No agrega fondo propio (deja ver el fondo de la página)
+*/
+
+:root {
+  --color-text-primary: #ffffff;
+  --color-accent-1: #a58dff;
+  --color-accent-2: #9b40f8;
+  --color-accent-3: #ff4cc7;
+  --color-muted: #bfb6ee;
+}
+
+/* Contenedor de la sección (NO background) */
+.HomeSections__community {
+  text-align: center;
+  padding: 100px 40px;
+  color: var(--color-text-primary);
+  background: transparent !important; /* asegura transparencia */
+}
+
+/* Título principal */
+.HomeSections__community .HomeSections__title {
+  margin-bottom: 16px;
+}
+
+/* Highlight del título (solo texto con gradiente, sin fondo real) */
+.HomeSections__community .HomeSections__highlight {
+  background: linear-gradient(45deg, var(--color-accent-1), var(--color-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Párrafo intro */
+.HomeSections__community p {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+/* Contenedor de iconos/estadísticas */
+.HomeSections__community .HomeSections__iconContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px;
+  margin: 36px 0;
+}
+
+/* Bloque individual */
+.HomeSections__community .HomeSections__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 140px;
+}
+
+/* Círculo (lo dejo con gradiente para que no sea un fondo sólido que tape tu bg) */
+.HomeSections__community .HomeSections__circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* Números y subtítulos */
+.HomeSections__community .HomeSections__icon h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.HomeSections__community .HomeSections__icon h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+/* Subtitle */
+.HomeSections__community .HomeSections__subtitle {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--color-muted);
+  font-size: 1.35rem;
+}
+
+/* Contenedor de reseñas */
+.HomeSections__community .Resenas-cards {
+  max-width: 1100px;
+  margin: 18px auto 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  background: transparent !important;
+}
+
+/* Mini info */
+.HomeSections__community .HomeSections__miniInfo {
+  max-width: 760px;
+  margin: 30px auto;
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+.HomeSections__community .HomeSections__miniInfo h2,
+.HomeSections__community .HomeSections__miniInfo h3 {
+  margin: 12px 0 6px;
+  color: var(--color-text-primary);
+}
+
+.HomeSections__community .HomeSections__miniInfo p {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* Botón principal */
+.HomeSections__community .HomeSections__button--primary {
+  margin-top: 18px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--color-accent-3), var(--color-accent-2));
+  color: var(--color-text-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.HomeSections__community .HomeSections__button--primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  transition: 0.2s ease-in-out;
+}

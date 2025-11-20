@@ -1,0 +1,80 @@
+.JuegoCard {
+  width: 250px;
+  background: #1b1b1f;
+  border: 1px solid #2a2a32;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.JuegoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.JuegoCard img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.JuegoCard h2 {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.JuegoCard small,
+.JuegoCard p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.JuegoCard .desc {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+/* Contenedor de acciones */
+.JuegoCard__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.JuegoCard__actions input[type="number"] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #2a2a32;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.JuegoCard__actions button {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #7c4dff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.JuegoCard__actions button:hover {
+  background: #623ccc;
+}
+
+.JuegoCard__actions select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #2a2a32;
+  color: #fff;
+}

@@ -1,0 +1,105 @@
+:root {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b9aee3;
+  --color-accent-1: #a58dff;
+  --color-accent-2: #9b40f8;
+  --color-accent-3: #ff4cc7;
+  --color-accent-4: #c8bdf4;
+}
+
+.HomeSections__features {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Títulos */
+.HomeSections__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 40px;
+}
+
+.HomeSections__subtitle--features {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+/* Grid */
+.HomeSections__cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 70px;
+}
+
+/* Tarjetas */
+.HomeSections__cardFeature {
+  background: rgba(74, 88, 131, 0.364); 
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 30px 20px;
+  color: var(--color-text-primary);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+/* Hover de tarjeta */
+.HomeSections__cardFeature:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+}
+
+/* Contenedor de emoji + título */
+.HomeSections__titleWithIcon {
+  display: inline-flex;        /* Horizontal, como una fila */
+  align-items: center;         /* Centrado vertical */
+  gap: 40px;                   /* Espacio entre emoji y título */
+  margin-bottom: 30px;         /* Espacio debajo del título */
+}
+
+/* Iconos */
+.HomeSections__iconBox {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Colores de iconos */
+.HomeSections__iconBox.blue { background: #4a90e2; }
+.HomeSections__iconBox.green { background: #3dc15f; }
+.HomeSections__iconBox.orange { background: #f5a623; }
+.HomeSections__iconBox.pink { background: #d86cf2; }
+
+/* Título dentro de card */
+.HomeSections__cardFeature h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;                 
+}
+
+/* Párrafo de la tarjeta */
+.HomeSections__cardFeature p {
+  font-size: 0.95rem;
+  color: #cfc7eb;
+  margin-bottom: 20px;
+}
+
+/* Botón Learn More */
+.HomeSections__learnMore {
+  display: flex;
+  font-weight: 600;
+  color: #9f89ff;
+  text-decoration: none;
+  justify-content: end;
+}
+
+.HomeSections__learnMore:hover {
+  text-decoration: underline;
+}

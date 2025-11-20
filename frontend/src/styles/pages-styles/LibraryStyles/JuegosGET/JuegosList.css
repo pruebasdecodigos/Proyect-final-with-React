@@ -1,0 +1,18 @@
+.JuegosGrid {
+  margin-left: 220px;       /* Sidebar */
+  padding: 20px 25px;
+  width: calc(100% - 220px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 28px;
+  box-sizing: border-box;
+}
+
+.JuegosGrid__empty {
+  width: 100%;
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 18px;
+  margin-top: 40px;
+}

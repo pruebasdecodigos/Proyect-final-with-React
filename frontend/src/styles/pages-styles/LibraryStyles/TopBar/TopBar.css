@@ -1,0 +1,79 @@
+/* Contenedor general */
+.ContentHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #0f1120;
+  padding-bottom: 0.8rem;
+  margin-left: 153px;
+}
+
+/* Barra superior */
+.ContentHeader__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #0f1120;
+}
+
+/* Search input */
+.ContentHeader__search {
+  width: 45%;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #1a1c2c;
+  color: #fff;
+  margin-left: 270px;
+}
+
+/* Right actions */
+.ContentHeader__actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* Buttons */
+.ContentHeader__filterBtn,
+.ContentHeader__addBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.ContentHeader__filterBtn {
+  background: #1a1c2c;
+  color: #bfbff2;
+}
+
+.ContentHeader__filterBtn:hover {
+  opacity: 0.8;
+}
+
+.ContentHeader__addBtn {
+  background: #7c4dff;
+  color: #fff;
+}
+
+.ContentHeader__addBtn:hover {
+  background: #623ccc;
+}
+
+/* Filters panel */
+.ContentHeader__filters {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #15172b;
+}
+
+.ContentHeader__filters select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background: #1f2137;
+  color: #fff;
+}

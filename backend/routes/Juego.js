@@ -1,0 +1,50 @@
+const express = require("express");
+const router = express.Router();
+const Juego = require("../models/Juego");
+
+// Obtener todos los juegos
+router.get("/", async (req, res) => {
+  try {
+    const juegos = await Juego.find().sort({ fechaCreacion: -1 });
+    res.json(juegos);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Crear un juego nuevo
+router.post("/", async (req, res) => {
+  try {
+    const nuevo = new Juego(req.body);
+    await nuevo.save();
+    res.json(nuevo);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Obtener un juego por ID
+router.get("/:id", async (req, res) => {
+  try {
+    const juego = await Juego.findById(req.params.id);
+    if (!juego) return res.status(404).json({ message: "Juego no encontrado" });
+    res.json(juego);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Eliminar un juego
+router.delete("/:id", async (req, res) => {
+  try {
+    const deleted = await Juego.findByIdAndDelete(req.params.id);
+    if (!deleted)
+      return res.status(404).json({ message: "Juego no encontrado" });
+
+    res.json({ message: "Juego eliminado correctamente" });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+module.exports = router;
