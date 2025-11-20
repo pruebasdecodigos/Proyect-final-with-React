@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
 const juegosRoutes = require("./routes/Juego");
-const resenasRoutes = require("./routes/Resena");
+const reviewsRoutes = require("./routes/Review");
 
 const app = express();
 const port = 5000;
@@ -21,7 +21,7 @@ mongoose
 
 // Usar rutas
 app.use("/api/juegos", juegosRoutes);
-app.use("/api/resenas", resenasRoutes);
+app.use("/api/reviews", reviewsRoutes);
 
 app.listen(port, () =>
   console.log(`🌍 Servidor corriendo en http://localhost:${port}/api`)

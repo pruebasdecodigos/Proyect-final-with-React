@@ -9,6 +9,11 @@ const JuegoSchema = new mongoose.Schema({
   imagenPortada: String,
   descripcion: String,
   completado: Boolean,
+
+  // 🔥 CAMPOS QUE TU MODAL NECESITA
+  horasJugadas: { type: Number, default: 0 },
+  estado: { type: String, default: "not playing" },
+
   fechaCreacion: { type: Date, default: Date.now }
 });
 

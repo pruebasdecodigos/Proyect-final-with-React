@@ -34,6 +34,25 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// Actualizar un juego
+router.put("/:id", async (req, res) => {
+  try {
+    const updated = await Juego.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    if (!updated)
+      return res.status(404).json({ message: "Juego no encontrado" });
+
+    res.json(updated);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+
 // Eliminar un juego
 router.delete("/:id", async (req, res) => {
   try {

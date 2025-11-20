@@ -7,19 +7,28 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #111;
-  color: #fff;
+
+  /* 🎨 Fondo suave + luz */
+  background: linear-gradient(180deg, #0d0d0d, #151515);
+  color: var(--color-text-primary);
 }
 
 .LibraryHeroSection__title {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
+
+  /* ✨ Glow suave morado */
+  color: var(--color-accent-2);
+  text-shadow: 0 0 12px rgba(155, 64, 248, 0.45);
 }
 
 .LibraryHeroSection__text {
   max-width: 700px;
   font-size: 1.2rem;
-  opacity: 0.9;
+  opacity: 0.85;
   margin-bottom: 3rem;
+
+  /* 💠 Segundo color tono violeta-rosa */
+  color: var(--color-text-secondary);
 }

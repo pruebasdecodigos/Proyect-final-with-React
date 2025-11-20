@@ -2,9 +2,16 @@ import "../../../styles/pages-styles/LibraryStyles/CardsHeroSection.css";
 
 export default function CardsHeroSection({ juegos }) {
   const totalGames = juegos.length;
-  const currentlyPlaying = juegos.filter(j => j.status === "playing").length;
-  const completed = juegos.filter(j => j.status === "completed").length;
-  const totalHours = juegos.reduce((sum, j) => sum + (j.hoursPlayed || 0), 0);
+
+  const currentlyPlaying = juegos.filter(j => j.estado === "playing").length;
+
+  const completed = juegos.filter(j => j.estado === "completed").length;
+
+  // 🔥 SUMA DE HORAS (nombre correcto: horasJugadas)
+  const totalHours = juegos.reduce((sum, j) => {
+    return sum + (j.horasJugadas ? Number(j.horasJugadas) : 0);
+  }, 0);
+  
 
   return (
     <div className="LibraryCardsHeroSection">

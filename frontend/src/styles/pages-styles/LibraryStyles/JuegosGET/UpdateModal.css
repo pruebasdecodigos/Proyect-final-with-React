@@ -1,0 +1,111 @@
+/* ------------------- */
+/* Modal interno Update */
+/* ------------------- */
+
+/* Fondo semi-transparente sobre el modal principal */
+.InnerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Contenedor del modal interno */
+.InnerModal {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(124, 77, 255, 0.3);
+  box-shadow: 0 0 20px rgba(124, 77, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: popIn 0.25s ease;
+}
+
+/* Título del modal interno */
+.InnerModal h3 {
+  font-size: 22px;
+  color: #bdaaff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.InnerModal label {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs y selects */
+.InnerModal input[type="number"],
+.InnerModal select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Contenedor de botones */
+.InnerButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Botones */
+.InnerButtons .SaveBtn,
+.InnerButtons .CancelBtn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Guardar */
+.InnerButtons .SaveBtn {
+  background: #7c4dff;
+  color: #fff;
+}
+
+.InnerButtons .SaveBtn:hover {
+  background: #623ccc;
+  box-shadow: 0 0 10px rgba(124, 77, 255, 0.5);
+}
+
+/* Cancelar */
+.InnerButtons .CancelBtn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.InnerButtons .CancelBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

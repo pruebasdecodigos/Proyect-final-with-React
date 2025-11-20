@@ -39,15 +39,10 @@ function Header({ menuType = "landing", className = "" }) {
         ) : (
           <ul className="TextSecondHeader">
             <li onClick={() => navigate("/main")}>Home</li>
-            <li onClick={() => navigate("/bibliary")}>Biblioteca</li>
             <li onClick={() => navigate("/reviews")}>Reseñas</li>
             <li onClick={() => navigate("/community")}>Comunidad</li>
             <li onClick={() => navigate("/#about-section")}>Desarrolladores</li>
             <li onClick={() => navigate("/settings")}>Configuracion</li>
-            <button className="add-btn" onClick={() => navigate("/pruebas")}>
-              + Agregar Juego
-            </button>
-
             <li>
               <button className="open-btn" onClick={() => navigate("/")}>
                 Volver al Landing
