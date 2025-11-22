@@ -80,11 +80,19 @@ const LandingContent = () => {
           </section>
         </section>
 
-         <div className="HomeContent">
+        <div className="HomeContent">
+          <div id="FeaturesLandingSection" className="FeaturesLandingSection">
             <HomeFeaturesSection />
+          </div>
+
+          <div id="LibraryLandingSection" className="LibraryLandingSection">
             <HomeLibrarySection />
+          </div>
+
+          <div id="CommunityLandingSection" className="CommunityLandingSection">
             <HomeCommunitySection />
-    </div>
+          </div>
+        </div>
       </main>
     </div>
   );

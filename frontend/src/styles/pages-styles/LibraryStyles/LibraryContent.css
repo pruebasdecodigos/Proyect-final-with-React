@@ -1,5 +1,5 @@
 .LibraryHeroSection {
-  width: 100%;
+  width: calc(100% - 150px);
   min-height: 60vh;
   padding: 4rem 2rem;
   display: flex;
@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-left: 150px;
 
   /* 🎨 Fondo suave + luz */
   background: linear-gradient(180deg, #0d0d0d, #151515);

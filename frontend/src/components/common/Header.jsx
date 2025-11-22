@@ -18,18 +18,20 @@ function Header({ menuType = "landing", className = "" }) {
 
   return (
     <header className={`landing-header ${className}`}>
-      <h1 className="logo">
+      <div>
+        <h1 className="logo">
         <span className="gex">Gex</span>
         <span className="studio">Studio</span>
-      </h1>
+        </h1>
+             <div className="div-logo"></div>
+      </div>
 
       <nav>
         {menuType === "landing" ? (
           <ul>
             <li onClick={() => scrollToSection("hero-section")}>Inicio</li>
-            <li onClick={() => scrollToSection("about-section")}>
-              Desarrolladores
-            </li>
+            <li onClick={() => scrollToSection("about-section")}>Desarrolladores</li>
+             <li onClick={() => scrollToSection("FeaturesLandingSection")}>Propuestas</li>
             <li>
               <button className="open-btn" onClick={() => navigate("/main")}>
                 Open GexStudio
@@ -39,10 +41,8 @@ function Header({ menuType = "landing", className = "" }) {
         ) : (
           <ul className="TextSecondHeader">
             <li onClick={() => navigate("/main")}>Home</li>
-            <li onClick={() => navigate("/reviews")}>Reseñas</li>
             <li onClick={() => navigate("/community")}>Comunidad</li>
             <li onClick={() => navigate("/#about-section")}>Desarrolladores</li>
-            <li onClick={() => navigate("/settings")}>Configuracion</li>
             <li>
               <button className="open-btn" onClick={() => navigate("/")}>
                 Volver al Landing

@@ -21,7 +21,8 @@
 }
 
 .footer-gametracker {
-  width: 100%;
+  margin-left: 150px;
+  width: auto;
   background: var(--footer-bg);
   backdrop-filter: blur(6px);
   color: var(--footer-text);

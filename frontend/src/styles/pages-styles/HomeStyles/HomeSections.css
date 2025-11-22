@@ -1,19 +1,15 @@
 :root {
   --margin-left-sections: 0px;
-  --padding-sections: 60px 40px;
-
-  /* Solo colores de texto, sin fondo */
+  --padding-sections: 70px 40px;
   --color-text-primary: #ffffff;
 }
 
 .HomeSections {
-  /* ❌ Eliminado fondo sólido */
-  /* background: var(--sections-bg); */
+
 
   padding: var(--padding-sections);
   color: var(--color-text-primary);
   min-height: 100vh;
   margin-left: var(--margin-left-sections);
-
-  background: transparent !important; /* 100% transparente */
+  background: transparent !important; 
 }

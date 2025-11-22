@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import {useAuth} from "../context/AuthContext.jsx"
 import InputField from "../components/Login/InputField.jsx";
 import Button from "../components/Login/Button.jsx";
 import FormFooter from "../components/Login/FormFooter.jsx";
@@ -10,6 +11,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
   const navigate = useNavigate();
+  const {login} = useAuth(); //Funcion para guardar el token
 
   // ✅ Recuperar email guardado si existe
   useEffect(() => {
@@ -44,21 +46,26 @@ function Login() {
       const data = await response.json();
 
       if (!response.ok) {
-        alert(`❌ ${data.msg || "Error al iniciar sesión"}`);
+        alert(`❌ ${data.msg || "Usuario o contraseña incorrectos"}`);
         return;
       }
 
       console.log("✅ Login exitoso:", data);
 
+      //Guardar token en el auth contextt
+      login(data.token);
+
       // Guardar email si "Recuérdame" está activo
       if (remember) localStorage.setItem("savedEmail", email);
       else localStorage.removeItem("savedEmail");
 
-      // Redirigir al home
+
+      //Redirigir a la biblioteca despues del login
       navigate("/main");
+
     } catch (err) {
       console.error("❌ Error al iniciar sesión:", err);
-      alert("Error de conexión con el servidor o credenciales incorrectas");
+      alert("Usuario o contraseña incorrectos");
     }
   };
 

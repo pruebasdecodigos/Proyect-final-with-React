@@ -2,6 +2,19 @@ const express = require("express");
 const router = express.Router();
 const Juego = require("../models/Juego");
 
+
+//reset de horas
+
+router.put("/reset/horas", async (req, res) => {
+  try{
+    //Actualizar todos los docs y poner "horasJugadas" en 0
+    await Juego.updateMany({}, {$set: {horasJugadas: 0}});
+    res.json ({message: "Horas reseteadas correctamente"});
+  }catch (err) {
+    res.status(500).json({msg: err.message})
+  }
+});
+
 // Obtener todos los juegos
 router.get("/", async (req, res) => {
   try {

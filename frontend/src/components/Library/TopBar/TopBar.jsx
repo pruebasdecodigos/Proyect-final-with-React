@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../../styles/pages-styles/LibraryStyles/TopBar/TopBar.css";
+import {resetHorasTodos} from "../../../services/juegoService.js"
 
 export default function TopBar({ onFilterChange }) {
   const [showFilters, setShowFilters] = useState(false);
@@ -8,12 +9,12 @@ export default function TopBar({ onFilterChange }) {
   const [plataforma, setPlataforma] = useState("");
 
   // Cada vez que un filtro cambie → enviamos todo junto al padre
-  const notifyChange = (newValues) => {
+  const notifyChange = (extra = {}) => {
     onFilterChange({
       searchText,
       genero,
       plataforma,
-      ...newValues,
+      ...extra, //Aqui se manda el reload con los cambios extrass
     });
   };
 
@@ -41,7 +42,6 @@ export default function TopBar({ onFilterChange }) {
             Filtros
           </button>
 
-          <button className="ContentHeader__addBtn">+ Añadir Juego</button>
         </div>
       </div>
 
@@ -78,6 +78,21 @@ export default function TopBar({ onFilterChange }) {
             <option value="Terror">Terror</option>
             <option value="MOBA">MOBA</option>
           </select>
+
+          
+          <button className="Hrs-btn-delete" onClick={async () => {
+            if (!window.confirm("¿Seguro que quieres eliminar las horas de todos los juegos?")) 
+              return;
+              try {
+                await resetHorasTodos(); //Llama al backend
+                alert("Horas eliminadas correctamente");
+
+                notifyChange({ reload: true}); //Esto es para recargar los jueogs
+              }catch (e) {
+                alert("Hubo un error al eliminar las horas");
+                console.error(e);
+              }
+           }}> Eliminar Hrs</button>
 
         </div>
       )}

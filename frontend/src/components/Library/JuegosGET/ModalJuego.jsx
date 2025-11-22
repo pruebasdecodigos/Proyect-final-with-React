@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../../styles/pages-styles/LibraryStyles/JuegosGET/ModalJuego.css";
 import "../../../styles/pages-styles/LibraryStyles/JuegosGET/UpdateModal.css";
 import { updateJuego } from "../../../services/juegoService";
 
 const ModalJuego = ({ juego, onClose, onUpdated }) => {
+  const navigate = useNavigate();
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [horas, setHoras] = useState(0);
   const [estado, setEstado] = useState("not playing");
@@ -18,7 +20,7 @@ const ModalJuego = ({ juego, onClose, onUpdated }) => {
   if (!juego) return null;
 
   const goToResena = () => {
-    window.location.href = `/resena/${juego._id}`;
+    navigate(`/reseñas/${juego._id}`);
   };
 
   const handleSave = async () => {
@@ -28,7 +30,6 @@ const ModalJuego = ({ juego, onClose, onUpdated }) => {
     });
 
     if (onUpdated) onUpdated(updated);
-
     setShowUpdateModal(false);
   };
 
@@ -52,15 +53,15 @@ const ModalJuego = ({ juego, onClose, onUpdated }) => {
         <div className="MiniCardsContainer">
           <div className="MiniCard">
             <h4>⏱ Horas jugadas</h4>
-            <p>{juego.horasJugadas || 0} hrs</p>
+            <p>{horas} hrs</p>
           </div>
 
           <div className="MiniCard">
             <h4>🎮 Estado</h4>
             <p>
-              {juego.estado === "playing"
+              {estado === "playing"
                 ? "En progreso"
-                : juego.estado === "completed"
+                : estado === "completed"
                 ? "Completado"
                 : "No jugando"}
             </p>
@@ -68,9 +69,7 @@ const ModalJuego = ({ juego, onClose, onUpdated }) => {
         </div>
 
         <div className="ModalButtons">
-          <button className="ResenaBtn" onClick={goToResena}>
-            ✍ Reseñas
-          </button>
+          <button className="ResenaBtn" onClick={goToResena}>✍ Reseñas</button>
 
           <button className="UpdateBtn" onClick={() => setShowUpdateModal(true)}>
             🔄 Actualizar datos
@@ -113,3 +112,6 @@ const ModalJuego = ({ juego, onClose, onUpdated }) => {
 };
 
 export default ModalJuego;
+
+
+

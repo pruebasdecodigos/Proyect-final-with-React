@@ -1,4 +1,4 @@
-import RegisterContent from "../content/RegisterContent.jsx";
+import RegisterContent from "../content/RegisterContent";
 
 function Register() {
   return (

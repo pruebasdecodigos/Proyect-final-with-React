@@ -1,12 +1,12 @@
 .JuegosGrid {
-  margin-left: 220px;       /* Sidebar */
+  margin-left: 151px;       /* Sidebar */
   padding: 20px 25px;
-  width: calc(100% - 220px);
+  width: calc(100% - 151px);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 28px;
+  justify-content: space-between;
   box-sizing: border-box;
+    background: linear-gradient( #151515);
 }
 
 .JuegosGrid__empty {

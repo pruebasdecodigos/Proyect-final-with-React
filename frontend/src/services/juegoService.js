@@ -39,3 +39,13 @@ export const deleteJuego = async (id) => {
   });
   return await res.json();
 };
+
+//PUT de reseteo de horas jugadas
+
+export const resetHorasTodos = async () => {
+  const res = await fetch (`${API_URL}/reset/horas`, {
+    method: "PUT",
+    headers: {"Content-Type": "application/json"},
+  });
+  return await res.json();
+};

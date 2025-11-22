@@ -8,6 +8,7 @@ const JuegosList = ({ filters, onStatsChange }) => {
   const [juegos, setJuegos] = useState([]);
   const [filtrados, setFiltrados] = useState([]);
   const [modalJuego, setModalJuego] = useState(null);
+  const [reloadFlag, setReloadFlag] = useState(false);
 
   // Cargar juegos al iniciar
   useEffect(() => {
@@ -19,7 +20,15 @@ const JuegosList = ({ filters, onStatsChange }) => {
       if (onStatsChange) onStatsChange(data);  // 🔥 ACTUALIZA HéroCards
     };
     load();
-  }, []);
+  }, [reloadFlag]);
+
+  //Escuchar al topbar cuando pida recarga
+
+  useEffect(() => {
+    if (filters.reload) {
+      setReloadFlag((prev) => !prev) //Hace que recargue otra vez
+    }
+  }, [filters.reload]);
 
 
   // Filtrar en tiempo real

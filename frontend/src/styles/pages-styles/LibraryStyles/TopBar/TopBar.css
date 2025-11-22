@@ -2,7 +2,7 @@
 .ContentHeader {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1;
   background: #0f0f1f; /* más oscuro, uniforme con el fondo */
   padding-bottom: 1rem;
   margin-left: 153px;
@@ -13,20 +13,20 @@
 .ContentHeader__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 1rem 1.5rem;
   background: #0f0f1f;
 }
 
 /* Search input */
 .ContentHeader__search {
-  width: 45%;
+  width: 55%;
   padding: 0.6rem 1rem;
   border-radius: 12px;
   border: none;
   background: #1a1c2c;
   color: #fff;
-  margin-left: 270px;
+  margin-left: 170px;
   box-shadow: inset 0 0 8px rgba(124, 77, 255, 0.3);
   transition: box-shadow 0.2s ease;
 }
@@ -43,9 +43,8 @@
 }
 
 /* Buttons */
-.ContentHeader__filterBtn,
-.ContentHeader__addBtn {
-  padding: 0.6rem 1rem;
+.ContentHeader__filterBtn{
+  padding: 1rem 1rem;
   border-radius: 12px;
   cursor: pointer;
   border: none;
@@ -60,17 +59,6 @@
 
 .ContentHeader__filterBtn:hover {
   opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.ContentHeader__addBtn {
-  background: #7c4dff;
-  color: #fff;
-  box-shadow: 0 2px 10px rgba(124,77,255,0.4);
-}
-
-.ContentHeader__addBtn:hover {
-  background: #623ccc;
   transform: translateY(-2px);
 }
 
@@ -97,3 +85,27 @@
   outline: none;
   box-shadow: inset 0 0 10px rgba(124,77,255,0.5);
 }
+
+.Hrs-btn-delete {
+  font-size: 15px;
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  margin-left: 25px;
+  transition: 0.2s ease, transform 0.2s ease;
+}
+
+.Hrs-btn-delete {
+  background: #262836ba;
+  color: #bfbff2;
+  box-shadow: 0 2px 8px rgba(124,77,255,0.2);
+}
+
+.Hrs-btn-delete:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
+
