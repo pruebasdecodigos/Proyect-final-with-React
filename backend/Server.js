@@ -3,6 +3,10 @@ const express = require("express");
 const cors = require("cors");
 const juegosRoutes = require("./routes/Juego");
 const reviewsRoutes = require("./routes/Review");
+const dotenv = require("dotenv");
+const authRoutes = require("./routes/auth")
+
+dotenv.config();
 
 const app = express();
 const port = 5000;
@@ -22,6 +26,11 @@ mongoose
 // Usar rutas
 app.use("/api/juegos", juegosRoutes);
 app.use("/api/reviews", reviewsRoutes);
+app.use("/api/auth", authRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Servidor funcionando ✅")
+})
 
 app.listen(port, () =>
   console.log(`🌍 Servidor corriendo en http://localhost:${port}/api`)

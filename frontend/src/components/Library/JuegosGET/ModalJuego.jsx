@@ -69,7 +69,7 @@ const ModalJuego = ({ juego, onClose, onUpdated }) => {
 
         <div className="ModalButtons">
           <button className="ResenaBtn" onClick={goToResena}>
-            ✍ Añadir reseña
+            ✍ Reseñas
           </button>
 
           <button className="UpdateBtn" onClick={() => setShowUpdateModal(true)}>
