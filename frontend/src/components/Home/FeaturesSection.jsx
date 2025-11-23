@@ -31,7 +31,6 @@ export default function FeaturesSection() {
               estado. Mantén el control de lo que estás jugando, has completado o quieres
               jugar a continuación.
             </p>
-            <a className="HomeSections__learnMore">Learn More →</a>
           </div>
 
           {/* CARD 2 */}
@@ -45,7 +44,6 @@ export default function FeaturesSection() {
               Monitorea tus horas de juego, tasas de finalización y logros. Establece
               objetivos y observa cómo tus estadísticas de juego crecen con el tiempo.
             </p>
-            <a className="HomeSections__learnMore">Learn More →</a>
           </div>
 
           {/* CARD 3 */}
@@ -59,7 +57,6 @@ export default function FeaturesSection() {
               Califica tus juegos y escribe reseñas detalladas. Comparte tus opiniones con
               la comunidad y ayuda a otros a descubrir grandes títulos.
             </p>
-            <a className="HomeSections__learnMore">Learn More →</a>
           </div>
 
           {/* CARD 4 */}
@@ -72,8 +69,6 @@ export default function FeaturesSection() {
               Conéctate con otros gamers, comparte tu biblioteca, descubre juegos populares
               y participa en discusiones sobre tus títulos favoritos.
             </p>
-            <div className="Learn More"></div>
-            <a className="HomeSections__learnMore">Learn More →</a>
           </div>
 
         </div>

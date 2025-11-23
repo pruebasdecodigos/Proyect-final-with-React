@@ -1,6 +1,6 @@
 :root {
   --color-text-primary: #ffffff;
-  --color-text-secondary: #b9aee3;
+  --color-text-secondary: #ffffff;
   --color-accent-1: #a58dff;
   --color-accent-2: #9b40f8;
   --color-accent-3: #ff4cc7;
@@ -9,7 +9,7 @@
 
 .HomeSections__features {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 /* Títulos */
@@ -17,12 +17,15 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-text-primary);
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .HomeSections__subtitle--features {
+  margin-left: 450px;
+  justify-content: center;
   color: var(--color-text-secondary);
-  font-size: 1.1rem;
+  width: 700px;
+  font-size: 1.3rem;
   margin-bottom: 60px;
 }
 
@@ -31,7 +34,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 /* Tarjetas */
@@ -86,20 +89,8 @@
 
 /* Párrafo de la tarjeta */
 .HomeSections__cardFeature p {
+  margin-top: 20px;
   font-size: 0.95rem;
   color: #cfc7eb;
-  margin-bottom: 20px;
-}
-
-/* Botón Learn More */
-.HomeSections__learnMore {
-  display: flex;
-  font-weight: 600;
-  color: #9f89ff;
-  text-decoration: none;
-  justify-content: end;
-}
-
-.HomeSections__learnMore:hover {
-  text-decoration: underline;
+  margin-bottom: 5px;
 }

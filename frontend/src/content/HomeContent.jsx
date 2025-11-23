@@ -9,8 +9,6 @@ import DevItem from "../components/Home/InfoDevelopers/DevItem.jsx";
 import "../styles/pages-styles/HomeStyles/HomeSections.css";
 
 import HomeFeaturesSection from "../components/Home/FeaturesSection.jsx";
-import HomeLibrarySection from "../components/Home/GameLibrarySection.jsx";
-import HomeCommunitySection from "../components/Home/CommunitySection.jsx";
 
 const LandingContent = () => {
   const navigate = useNavigate();
@@ -83,14 +81,6 @@ const LandingContent = () => {
         <div className="HomeContent">
           <div id="FeaturesLandingSection" className="FeaturesLandingSection">
             <HomeFeaturesSection />
-          </div>
-
-          <div id="LibraryLandingSection" className="LibraryLandingSection">
-            <HomeLibrarySection />
-          </div>
-
-          <div id="CommunityLandingSection" className="CommunityLandingSection">
-            <HomeCommunitySection />
           </div>
         </div>
       </main>

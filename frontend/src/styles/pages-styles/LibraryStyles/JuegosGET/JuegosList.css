@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   box-sizing: border-box;
-    background: linear-gradient( #151515);
+  background: linear-gradient(180deg, #151515, #151515, #300f4b6b);
 }
 
 .JuegosGrid__empty {

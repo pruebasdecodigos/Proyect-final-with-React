@@ -10,7 +10,7 @@
   margin-left: 150px;
 
   /* 🎨 Fondo suave + luz */
-  background: linear-gradient(180deg, #0d0d0d, #151515);
+  background: linear-gradient(180deg, #300f4b, #151515);
   color: var(--color-text-primary);
 }
 

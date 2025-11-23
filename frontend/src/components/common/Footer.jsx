@@ -1,6 +1,22 @@
 import "../../styles/Footer.css";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleScrollToHero = (e) => {
+    e.preventDefault();
+    const targetId = "hero-section";
+    const isLanding = window.location.pathname === "/";
+
+    if (isLanding) {
+      const el = document.getElementById(targetId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${targetId}`);
+    }
+  };
+
   const handleScrollToDevelopers = (e) => {
     e.preventDefault();
     const targetId = "about-section";
@@ -10,7 +26,18 @@ function Footer() {
       const el = document.getElementById(targetId);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.location.href = `/#${targetId}`;
+      navigate(`/#${targetId}`);
+    }
+  };
+
+  const handleScrollToMain = (e) => {
+    e.preventDefault();
+    const isMain = window.location.pathname === "/main";
+
+    if (isMain) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/main");
     }
   };
 
@@ -31,10 +58,8 @@ function Footer() {
         <div className="footer-section">
           <h3>Explorar</h3>
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="/library">Biblioteca</a></li>
-            <li><a href="/trending">Tendencias</a></li>
-            <li><a href="/community">Comunidad</a></li>
+            <li><button onClick={handleScrollToHero}>Inicio</button></li>
+            <li><button onClick={handleScrollToMain}>Biblioteca</button></li>
           </ul>
         </div>
 
@@ -42,14 +67,10 @@ function Footer() {
         <div className="footer-section">
           <h3>Acerca</h3>
           <ul>
-            <li>
-              <a href="/#about-section" onClick={handleScrollToDevelopers}>
-                Sobre Nosotros
-              </a>
-            </li>
-            <li><a href="/contact">Contacto</a></li>
-            <li><a href="/support">Soporte</a></li>
-            <li><a href="/terms">Términos</a></li>
+            <li><button onClick={handleScrollToDevelopers}>Sobre Nosotros</button></li>
+            <li><button onClick={() => navigate("/contact")}>Contacto</button></li>
+            <li><button onClick={() => navigate("/support")}>Soporte</button></li>
+            <li><button onClick={() => navigate("/terms")}>Términos</button></li>
           </ul>
         </div>
 
@@ -57,10 +78,24 @@ function Footer() {
         <div className="footer-section social">
           <h3>Conéctate</h3>
           <div className="social-links">
-            <a href="#"><i className="fa-brands fa-discord"></i></a>
-            <a href="#"><i className="fa-brands fa-github"></i></a>
-            <a href="#"><i className="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i className="fa-brands fa-youtube"></i></a>
+            <a href="https://discord.gg/g7Ht95rd" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-discord"></i>
+            </a>
+            <a href="https://github.com/pruebasdecodigos" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a href="https://x.com/__Duvan" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/@fundacionrofe-tocaunavida7147" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/duvanltbaq/" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/duvan.altamar.77/" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-facebook"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -76,7 +111,3 @@ function Footer() {
 }
 
 export default Footer;
-
-/*==============
-  Terminado :D
-==============*/

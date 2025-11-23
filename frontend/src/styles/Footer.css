@@ -71,6 +71,7 @@
   margin-bottom: 8px;
 }
 
+/* Estilo para enlaces normales */
 .footer-section ul li a {
   color: var(--footer-text);
   opacity: 0.75;
@@ -79,6 +80,24 @@
 }
 
 .footer-section ul li a:hover {
+  color: var(--footer-accent);
+  opacity: 1;
+}
+
+/* Estilo para botones que reemplazan enlaces */
+.footer-section ul li button {
+  background: none;
+  border: none;
+  color: var(--footer-text);
+  opacity: 0.75;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: left; /* Alinea como los <li> */
+  transition: color 0.2s ease, opacity 0.3s ease;
+}
+
+.footer-section ul li button:hover {
   color: var(--footer-accent);
   opacity: 1;
 }
@@ -150,7 +169,7 @@
   }
 }
 
-/*Para futuras animaciones*/
+/* Para futuras animaciones */
 .footer-glow {
   box-shadow: 0 0 15px var(--footer-accent);
 }
